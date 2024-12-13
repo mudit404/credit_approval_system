@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Approval System</title>
+</head>
+<body>
+    <h1>Welcome to the Credit Approval System</h1>
+    <nav>
+        <ul>
+            <li><a href="/register/">Register a Customer</a></li>
+            <li><a href="/check-eligibility/">Check Loan Eligibility</a></li>
+            <li><a href="/create-loan/">Create a Loan</a></li>
+            <li><a href="/view-loans/1/">View Loans by Customer ID</a></li>
+        </ul>
+    </nav>
+
+    <form action="/register/" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First Name" required><br>
+        <input type="text" name="last_name" placeholder="Last Name" required><br>
+        <input type="number" name="age" placeholder="Age" required><br>
+        <input type="text" name="phone_number" placeholder="Phone Number" required><br>
+        <input type="number" name="monthly_income" placeholder="Monthly Income" required><br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
